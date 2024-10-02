@@ -94,26 +94,26 @@ export function MainProvider({ children }: MainProviderProps) {
 
   const changeDirectionHandle = useCallback(
     (key: KeyboardEvent<HTMLDivElement>) => {
-      if (key.key === "w" && moveDirection !== "bottom") {
+      if (key.key === "ArrowUp" && moveDirection !== "bottom") {
         setMoveDirection("top");
         localStorage.setItem("direction", "top");
       }
-      if (key.key === "a" && moveDirection !== "right") {
+      if (key.key === "ArrowLeft" && moveDirection !== "right") {
         setMoveDirection("left");
         localStorage.setItem("direction", "left");
       }
-      if (key.key === "d" && moveDirection !== "left") {
+      if (key.key === "ArrowRight" && moveDirection !== "left") {
         setMoveDirection("right");
         localStorage.setItem("direction", "right");
       }
-      if (key.key === "s" && moveDirection !== "top") {
+      if (key.key === "ArrowDown" && moveDirection !== "top") {
         setMoveDirection("bottom");
         localStorage.setItem("direction", "bottom");
       }
     },
     [moveDirection]
   );
-
+  
   const addNewFood = useCallback(
     (foods: FoodType[]) => {
       const newFood: number[][] = foods;

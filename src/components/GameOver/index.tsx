@@ -14,7 +14,8 @@ export default function GameOver() {
     <div className={styles.container}>
       <h1>GAME OVER!</h1>
       <p>Score: {wormBody.length}</p>
-      {isRoot() && <button onClick={reloadHandle}>Começar de novo</button>}
+      {isRoot() && <button onClick={reloadHandle}>Start Again</button>}
+
     </div>
   );
 }
